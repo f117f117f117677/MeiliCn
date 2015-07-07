@@ -1,0 +1,210 @@
+#news img
+{
+
+}
+
+#news .panel-heading
+{
+    background: #05ad7e;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+#news .panel-heading p
+{
+    margin: auto;
+}
+
+#news .tian
+{
+    background: #dadada;
+    padding: 0;
+    margin: 20px 45px;
+    color: #343434;
+}
+
+ .tian h4, .tian p, .enter h4, .enter p, .enter h2
+{
+    margin: 10px;
+}
+
+.enter
+{
+    color: #343434;
+}
+
+
+/*trends.html
+---------------------------------------------------*/
+
+#trends
+{
+    color: #9c9c9c;
+}
+
+#trends .panel-heading p
+{
+    margin: auto;
+    font-weight: bolder;
+    font-size: 16px;
+}
+
+#policy .panel-heading
+{
+    background: #05ad7e;
+}
+
+.linews img
+{
+    margin-right: 10px;
+}
+
+#zhuanfang img
+{
+    width: 100%;
+}
+
+#zhuanfang .hen
+{
+    margin-top: 20px;
+}
+
+#trends
+{
+    margin-top: 20px;
+}
+
+#policy img
+{
+    width: 220px;
+}
+
+/*---------------------------------------------*/
+.clear
+{
+    clear: both;
+}
+
+/*
+-----------------------------------*/
+#bottom_info hr
+{
+    width: 30%;
+    border-top: 3px solid #fff;
+}
+
+#bottom_info
+{
+    background: #01a279;
+    color: #fff;
+    padding: 10px 0;
+}
+
+#bottom_info .three_info
+{
+    margin: 10px 0 0 0;
+}
+
+/*contact.html    contact_us
+-----------------------------------*/
+#contact_us
+{
+    color: #222222;
+}
+
+#contact_us .xinxi
+{
+    background: #ffffff;
+    padding: 50px;
+}
+
+#contact_us .mail
+{
+    background: #b3b3b3;
+    padding: 30px 0 0 30px;
+}
+
+.top_picture img,.side-pic img /*contact case trends*/
+{
+    width: 100%;
+    height: auto;
+}
+/*case.html
+-----------------------------------*/
+#xuan button
+{
+    margin: 15px 0 15px 15px;
+}
+
+/*details.html
+--------------------------------*/
+
+#jinxuan ul
+{
+    list-style: none;
+    padding: 0;
+    color: #898989;
+    font-size: medium;
+}
+
+article p
+{
+
+    margin: 20px 20px 20px 0;
+}
+
+article ol li
+{
+    margin: 10px 10px 10px 0;
+}
+
+article ol
+{
+    margin-bottom: 20px;
+}
+
+article h4
+{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+article
+{
+    color: #353535;
+}
+
+aside
+{
+    margin-top: 20px;
+}
+
+/*chuangye.html
+------------------------------*/
+#chuangye article img
+{
+    margin-right: 50px;
+}
+
+#ruimei hr
+{
+    border-top: 3px solid #898989;
+    width: 83%;
+}
+
+#ruimei img
+{
+    margin-right: 10px;
+}
+
+ .three, #yitong .yilianpic
+{
+    margin-bottom: 30px;
+}
+
+ a
+ {
+     color: #05ad7e;
+ }

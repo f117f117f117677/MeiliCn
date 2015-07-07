@@ -63,16 +63,6 @@ if(isset($_GET['addform']))
     include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/db.inc.php';
     require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/appConfig.inc.php';
 
-
-    /*
-    if($_POST['account'] == '')
-    {
-        $error = 'You must choose a user for this content. Click &lsquo;back&rsquo; and try again.';
-        include 'error.html.php';
-        exit();
-    }*/
-
-
     //different directory
     $file_dir = array(0 => '/profile_images/',
                       1 => '/profile_videos/',
@@ -121,8 +111,8 @@ if(isset($_GET['addform']))
             $now++;
         }
 
-        //move the image
-        if(!move_uploaded_file($_FILES['files']['tmp_name'][$i], $upload_filename[$i]))
+        //move the image //if(!move_uploaded_file($_FILES['files']['tmp_name'][$i], $upload_filename[$i]))
+        if(!move_uploaded_file( $_FILES['files']['tmp_name'][$i], iconv('utf-8','gb2312', $upload_filename[$i])) )
         {
             $error = 'we had a problem saving your image to its pernament location'."{$upload_filename[$i]}";
             include 'error.html.php';
@@ -132,7 +122,7 @@ if(isset($_GET['addform']))
 
 
 
-    /*
+
     //put a content into database.
     try
     {
@@ -152,9 +142,9 @@ if(isset($_GET['addform']))
         $s->bindValue(':categoryId', $_POST['category']);
         $s->bindValue(':title', $_POST['title']);
         $s->bindValue(':mainText', $_POST['text']);
-        $s->bindValue(':video', null);
-        $s->bindValue(':img', $upload_filename[]);
-        $s->bindValue(':threeD', null);
+        $s->bindValue(':img', $upload_filename[0]);
+        $s->bindValue(':video', $upload_filename[1]);
+        $s->bindValue(':threeD', $upload_filename[2]);
         $s->bindValue(':usrId',$_POST['account']);
         $s->execute();
 
@@ -164,7 +154,7 @@ if(isset($_GET['addform']))
         $error = 'Error inserting content into database. '. $e->getMessage();
         include_once 'error.html.php';
         exit();
-    }*/
+    }
 }
 
 

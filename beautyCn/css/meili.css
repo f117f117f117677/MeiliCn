@@ -1,0 +1,330 @@
+body
+{
+    color: #bebebe;
+    background: #f5f5f5;
+}
+
+
+/*navbar
+----------------------------------------------------*/
+#hnav
+{
+    margin: 0;
+}
+
+#hnav a span, #hnav a img
+{
+    display: inline;
+    margin: auto;
+}
+
+#hnav form
+{
+    margin-top: 20px;
+}
+
+
+#navbar
+{
+    border-top: 3px solid #05ad7e;
+}
+
+#navbar li>a:hover,
+#navbar li>a:focus
+{
+    color: #fff;
+    background-color: #05ad7e;
+}
+
+#navbar li a
+{
+    text-align: center;
+}
+
+#navbar li strong
+{
+    display: block;
+    font-size: 120%;
+    text-shadow: 0 0 0 #3E3A37;
+}
+
+/*Carousel
+------------------------------------------------*/
+.carousel
+{
+    height: 500px;
+    margin-bottom: 0px;
+}
+
+
+.carousel-caption
+{
+    z-index: 10;
+}
+
+.carousel .item
+{
+    height: 500px;
+    background-color: #777;
+}
+
+.carousel-inner>.item>img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 500px;
+}/**/
+
+/*jianjie
+-------------------------------------------------*/
+#jianjie
+{
+    padding: 10px;
+}
+
+#jianjie label + label
+{
+    margin-left: 30px;
+
+}
+
+#jianjie label
+{
+    color: #222222;
+}
+
+
+/*feature
+-----------------------------------------*/
+#feature .marketing
+{
+    background-color: rgb(229, 229, 229);
+    padding: 20px 0;
+}
+
+#feature h3
+{
+    color: #4a4a4a;
+}
+
+#feature p
+{
+    color: #a8a8a8;
+}
+
+#feature hr
+{
+    border-top: 3px solid #555555;
+    width: 70%;
+}
+
+
+/*recent work
+---------------------------------------------------*/
+#recent-works .col-xs-12.col-sm-4.col-md-3
+{
+    padding: 0;
+}
+
+#recent-works
+{
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.recent-work-wrap
+{
+    position: relative;
+}
+
+.recent-work-wrap img
+{
+    width: 100%;
+}
+
+.recent-work-wrap .recent-work-inner
+{
+    top: 0;
+    background: transparent;
+    opacity: .8;
+    width: 100%;
+    border-radius: 0;
+    margin-bottom: 0;
+}
+
+.recent-work-wrap .overlay
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    border-radius: 0;
+    background: #c52d2f;
+    color: #fff;
+    vertical-align: middle;
+    -webkit-transition: opacity 500ms;
+    -moz-transition: opacity 500ms;
+    -o-transition: opacity 500ms;
+    transition: opacity 500ms;
+    padding: 30px;
+}
+
+.recent-work-wrap:hover .overlay
+{
+    opacity: 1;
+}
+
+/*banner----------------------------------------------
+*/
+#banner img
+{
+    width:  100%;
+    height: auto;
+}
+
+/*clients
+-----------------------------------------------*/
+#clients img
+{
+    margin: 50px auto;
+}
+
+#clients
+{
+    background: #fff;
+    color: #a3a3a3;
+}
+
+#clients hr
+{
+    border-top: 2px solid #a3a3a3;
+
+}
+
+.img-centered
+{
+    margin: 0 auto;
+}
+
+/*bottom
+----------------------------------------------*/
+#bottom
+{
+
+    color: #ffffff;
+    font-size: 14px;
+}
+
+#bottom h4
+{
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+#bottom ul
+{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#bottom ul li
+{
+    padding: 5px 0;
+}
+
+#bottom .container
+{
+    background-color: #4f4f4f;
+}
+
+#bottom hr
+{
+    border-top: 2px solid #fff;
+    width: 60px;
+    margin-right: 260px;
+}
+
+.contact h5, .contact p
+{
+    display: inline;
+}
+
+.social li
+{
+    float: left;
+    margin-right: 10px;
+}
+
+.about,.contact,.social
+{
+    margin: 10px 0 30px 40px ;
+}
+
+/*----------------------------------------------
+zhaopin*/
+#zhaopin .container
+{
+    background-color: rgb(229, 229, 229);
+    color: #000000;
+    font-weight: bold;
+}
+
+#zhaopin blockquote
+{
+    margin-top: 15px;
+}
+.zhaobutton
+{
+    margin-top: 50px;
+}
+
+/*----------------------------------------------
+footer*/
+#footer
+{
+
+}
+
+#footer .footbo
+{
+    background-color: #2e2e2e;
+    color: #fff;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+
+/*responsive css
+------------------------------------------------*/
+@media (min-width:  768px)
+{
+
+    .carousel-caption p
+    {
+        margin-bottom: 20px;
+        font-size: 21px;
+        line-height: 1.4;
+    }
+
+    .featurette-heading
+    {
+        font-size: 50px;
+    }
+}
+
+@media (min-width: 992px)
+{
+    .featurette-heading
+    {
+        margin-top: 120px;
+    }
+}
+
