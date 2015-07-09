@@ -75,5 +75,8 @@
 <script src="../js/bootstrap.js"></script>
 <!--html video supported by all -->
 <script src="../js/html5media.min.js"></script>
+<!--to play a unity3d file-->
+<script src="../js/unityObject.js"></script>
+<script src="../js/content.js"></script>
 </body>
 </html>

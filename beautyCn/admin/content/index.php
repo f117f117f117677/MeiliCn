@@ -7,6 +7,21 @@
  */
 
 include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/magicquotes.inc.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/access.inc.php';
+
+
+if(!userIsLoggedIn())
+{
+    include '../login.html.php';
+    exit();
+}
+
+if(!userHasRole('Site Administrator'))
+{
+    $error = '对不起，只有栏目分类管理员才能浏览此页面。';
+    include '../accessdenied.html.php';
+    exit();
+}
 
 if(isset($_GET['add']))
 {
@@ -96,13 +111,17 @@ if(isset($_GET['addform']))
             exit();
         }
 
-        //check whether a image
-        if(!getimagesize($_FILES['files']['tmp_name'][$i]))
+        if($i == 0)
         {
-            $error = 'your selection is not a image'."{$_FILES['files']['tmp_name'][$i]}"."不是有效图片";
-            include 'error.html.php';
-            exit();
+            //check whether a image
+            if(!getimagesize($_FILES['files']['tmp_name'][$i]))
+            {
+                $error = 'your selection is not a image'."{$_FILES['files']['tmp_name'][$i]}"."不是有效图片";
+                include 'error.html.php';
+                exit();
+            }
         }
+
 
         //name the image
         $now = time();
@@ -111,8 +130,9 @@ if(isset($_GET['addform']))
             $now++;
         }
 
-        //move the image //if(!move_uploaded_file($_FILES['files']['tmp_name'][$i], $upload_filename[$i]))
-        if(!move_uploaded_file( $_FILES['files']['tmp_name'][$i], iconv('utf-8','gb2312', $upload_filename[$i])) )
+        //move the image
+        if(!move_uploaded_file($_FILES['files']['tmp_name'][$i], $upload_filename[$i]))
+        //if(!move_uploaded_file( $_FILES['files']['tmp_name'][$i], iconv('utf-8','gb2312', $upload_filename[$i])) )
         {
             $error = 'we had a problem saving your image to its pernament location'."{$upload_filename[$i]}";
             include 'error.html.php';

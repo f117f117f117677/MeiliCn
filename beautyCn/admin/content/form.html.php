@@ -66,7 +66,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/helpers.inc.php'; ?>
 
 
             <div>
-                <input type="hidden" name="MAX_FILE_SIZE" value="2000000">
+                <input type="hidden" name="MAX_FILE_SIZE" value="20000000">
                 <label for="image">上传图片：</label>
                 <input type="file" name="files[]" id="image" value="image" size="30" />
             </div>

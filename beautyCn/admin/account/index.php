@@ -8,6 +8,8 @@
 include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/magicquotes.inc.php';
 
 require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/access.inc.php';
+
+/*
 if(!userIsLoggedIn())
 {
     include '../login.html.php';
@@ -20,7 +22,7 @@ if(!userHasRole('Account Administrator'))
     include '../accessdenied.html.php';
     exit();
 }
-
+*/
 
 if(isset($_GET['add']))
 {
@@ -326,5 +328,7 @@ foreach($result as $row)
 {
     $usrs[] = array('usrId' => $row['usrId'],'usrname'=>$row['usrname']);
 }
+
+$num_users = count($usrs);
 
 include 'account.html.php';

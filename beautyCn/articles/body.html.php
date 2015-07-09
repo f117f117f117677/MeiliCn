@@ -14,16 +14,42 @@
         <div class="three">
             <img src="<?php echo $article['img']?>">
         </div>
+
         <div>
             <video width="640" height="320" controls preload="auto">
                 <!--Chrome$ safari-->
                 <source src="<?php echo $article['video'] ;?>" type="video/mp4"/>
                 <!--Firefox-->
-                <source src="<?php echo $article[''] ;?>" type="video/"/>
+                <source src="<?php echo $article['video'] ;?>" type="video/egg"/>
                 <!--flash-->
-                <embed src="" type="application/x-shockwave-flash" width="1024" height="798"
+                <embed src="<?php echo $article['video'] ;?>" type="application/x-shockwave-flash" width="1024" height="798"
                        allowscriptaccess="always" allowfullscreen="true"></embed>
             </video>
+        </div>
+
+        <div>
+            <embed allownetworking="none" allowscriptaccess="never" width="960" height="182" loop="false"
+                   menu="false" play="true" pluginspage="http://www.macromedia.com/go/getflashplayer"
+                   src="<?php echo $article['video'] ;?>" type="application/x-shockwave-flash"wmode="window"></embed>
+        </div>
+
+        <div>
+            <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="960" height="182" title="flash">
+                <param name="movie" value="images/BANNER.swf" />
+                <param name="quality" value="high" />
+                <embed src="<?php echo $article['video'] ;?>" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="960" height="182"></embed>
+            </object>
+        </div>
+
+        <span id="threeD" title="<?php echo $article['threeD']; ?>"></span>
+
+        <div id="unityPlayer">
+            <div>
+                <a href="http://unity3d.com/webplayer/" title="请下载三维场景播放器">
+                    <img alt="安装三维场景播放器！" src="http://webplayer.unity3d.com/installation/getunity.png"
+                         width="193" height="63" />
+                </a>
+            </div>
         </div>
 
     </article>
